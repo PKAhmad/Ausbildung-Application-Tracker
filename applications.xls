@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>6360</WindowHeight>
+  <WindowWidth>18960</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Aptos Narrow" x:Family="Swiss" ss:Size="11"
+    ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s64">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s65">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="12" ss:Color="#222222"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Aptos Narrow" x:Family="Swiss" ss:Size="11"
+    ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s68">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="7" ss:Color="#565656"/>
+  </Style>
+  <Style ss:ID="s69">
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s70">
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s71">
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#404040"/>
+  </Style>
+  <Style ss:ID="s72">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s79">
+   <NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="s81">
+   <NumberFormat ss:Format="yyyy\-mm\-dd;@"/>
+  </Style>
+  <Style ss:ID="s82">
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <NumberFormat ss:Format="yyyy\-mm\-dd;@"/>
+  </Style>
+  <Style ss:ID="s83">
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Interior ss:Color="#00B0F0" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="yyyy\-mm\-dd;@"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Applications">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="54" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:Index="5" ss:StyleID="s81" ss:Width="139"/>
+   <Row>
+    <Cell><Data ss:Type="String">Company</Data></Cell>
+    <Cell><Data ss:Type="String">City</Data></Cell>
+    <Cell><Data ss:Type="String">Position</Data></Cell>
+    <Cell><Data ss:Type="String">Status</Data></Cell>
+    <Cell><Data ss:Type="String">Date</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Stadt Essen</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Friedrich Picard GmbH &amp; Co. KG</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Bochum</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-07T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Diakonie RWL</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Dusseldorf</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-08T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">United Internet AG</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Krefeld</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-08T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">merkarion GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Dortmund</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-10T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">MVZ OGPaedicum</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Herten</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-10T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Arineo GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Gottingen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-24T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Finanzamt Kassel</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Gottingen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-24T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">WERTGARANTIE Group</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Hannover</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-25T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String"> Hornetsecurity GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Hannover</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-25T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Ernsting’s Family GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Coesfeld</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-26T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">SMS Group GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Mönchengladbach</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-26T00:00:00.000</Data></Cell>
+   </Row>
+   <Row ss:Height="15.5">
+    <Cell ss:StyleID="s65"><Data ss:Type="String"> mbH Göttingen (GWDG)</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Gottingen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">Interviewed</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">GFOS mbH – Gesellschaft für Organisationsberatung und Softwareentwicklung mbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Color="#000000">MC-Bauchemie in Bottrop</Font></B><Font
+       html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Bottrop</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Vivawest Wohnen GmbH</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">Gelsenkirchen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">IC Consult</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">RWE</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">opta Data</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Duisburg University</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Duisburg University</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">TA Project GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">TA Project GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Landkreis Gottingen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Gottingen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Panther Packaging GmbH &amp; Co. KG</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Bottrop</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2025-12-15T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Panther Packaging GmbH &amp; Co. KG</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Bottrop</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-12-15T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">e.bootis</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2025-12-15T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Luttermann</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2025-12-15T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">Stölting Service Group GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Gelsenkirchen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2025-12-15T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">vonovia</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Bochum</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Dual studium</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-01-11T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">knapschaft Bahn see</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">bochum</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s83"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">CMS IT consultant</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Dinslaken</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-01-11T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Bechtle Recruiting</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-01-25T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">TÜV Informationstechnik GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Essen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-01-25T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Volkswagen Infotainment GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Bochum</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-01-25T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">DTS Systeme GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Bochum</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-01-25T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">DTS Systeme GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Herford</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-01-25T00:00:00.000</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s79"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">PROSOZ Herten GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Herten</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-07T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">&#160;it-motive AG</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Duisburg</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-07T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">eck*cellent IT GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Dortmund</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-08T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">acadon AG</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Krefeld</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-08T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">EDEKA IT Stiftung &amp; Co. OHG</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Moers</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-08T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">teccle group</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Ratingen</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-10T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">meap GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Witten</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-10T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Evonik Industries AG</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Marl</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Rejected</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-02-10T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">einnuleins IT</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Laatzten</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-03-05T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Rezeptprüfstelle Duderstadt GmbH</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Duderstadt</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Systemintegration</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-03-05T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">geschenke-online 4you GmbH. </Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Leinefeld</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Anwendungsentwicklung</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">Applied</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="DateTime">2026-03-06T00:00:00.000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s70"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s70"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s70"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s70"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s72"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>6</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C4:R49C4</Range>
+   <Type>List</Type>
+   <CellRangeList/>
+   <Value>&quot;Applied,Waiting,Interviewed,Rejected,Further Process&quot;</Value>
+  </DataValidation>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R13C2</Range>
+   <Condition>
+    <Value1>RC3=&quot;Applied&quot;</Value1>
+    <Format Style='background:#0F9ED5;mso-pattern:lightgreen none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Waiting&quot;</Value1>
+    <Format Style='background:orange;mso-pattern:orange none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Interviewed&quot;</Value1>
+    <Format Style='background:skyblue;mso-pattern:skyblue none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Rejected&quot;</Value1>
+    <Format Style='background:tomato;mso-pattern:tomato none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Further Process&quot;</Value1>
+    <Format Style='background:lightgreen;mso-pattern:lightgreen none'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R41C2:R54C2</Range>
+   <Condition>
+    <Value1>RC3=&quot;Applied&quot;</Value1>
+    <Format Style='background:#0F9ED5;mso-pattern:lightgreen none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Waiting&quot;</Value1>
+    <Format Style='background:orange;mso-pattern:orange none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Interviewed&quot;</Value1>
+    <Format Style='background:skyblue;mso-pattern:skyblue none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Rejected&quot;</Value1>
+    <Format Style='background:tomato;mso-pattern:tomato none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Further Process&quot;</Value1>
+    <Format Style='background:lightgreen;mso-pattern:lightgreen none'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R14C2:R40C2</Range>
+   <Condition>
+    <Value1>RC3=&quot;Applied&quot;</Value1>
+    <Format Style='background:#0F9ED5;mso-pattern:lightgreen none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Waiting&quot;</Value1>
+    <Format Style='background:orange;mso-pattern:orange none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Interviewed&quot;</Value1>
+    <Format Style='background:skyblue;mso-pattern:skyblue none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Rejected&quot;</Value1>
+    <Format Style='background:tomato;mso-pattern:tomato none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Further Process&quot;</Value1>
+    <Format Style='background:lightgreen;mso-pattern:lightgreen none'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R2C4:R49C4</Range>
+   <Condition>
+    <Value1>RC3=&quot;Applied&quot;</Value1>
+    <Format Style='background:#0F9ED5;mso-pattern:lightgreen none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Waiting&quot;</Value1>
+    <Format Style='background:orange;mso-pattern:orange none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Interviewed&quot;</Value1>
+    <Format Style='background:skyblue;mso-pattern:skyblue none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Rejected&quot;</Value1>
+    <Format Style='background:tomato;mso-pattern:tomato none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Further Process&quot;</Value1>
+    <Format Style='background:lightgreen;mso-pattern:lightgreen none'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R14C5:R26C5,R28C5:R40C5</Range>
+   <Condition>
+    <Value1>RC3=&quot;Applied&quot;</Value1>
+    <Format Style='background:#0F9ED5;mso-pattern:lightgreen none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Waiting&quot;</Value1>
+    <Format Style='background:orange;mso-pattern:orange none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Interviewed&quot;</Value1>
+    <Format Style='background:skyblue;mso-pattern:skyblue none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Rejected&quot;</Value1>
+    <Format Style='background:tomato;mso-pattern:tomato none'/>
+   </Condition>
+   <Condition>
+    <Value1>RC3=&quot;Further Process&quot;</Value1>
+    <Format Style='background:lightgreen;mso-pattern:lightgreen none'/>
+   </Condition>
+  </ConditionalFormatting>
+ </Worksheet>
+</Workbook>

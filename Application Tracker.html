@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Application-Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f0f2f5;
+      color: #333;
+    }
+    h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
+
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+    }
+    .box h2 { margin: 0 0 14px; font-size: 17px; color: #2c3e50; }
+
+    .row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+    .row input, .row select {
+      flex: 1;
+      min-width: 150px;
+      padding: 9px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .row input:focus { outline: none; border-color: #3498db; }
+
+    .auto-status {
+      flex: 1;
+      min-width: 150px;
+      padding: 9px 12px;
+      border: 1px solid #f0c36d;
+      border-radius: 6px;
+      font-size: 13px;
+      background: #fef9e7;
+      color: #d68910;
+      font-weight: bold;
+    }
+
+    .btn-row { display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
+
+    button.add {
+      padding: 9px 20px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button.add:hover { background: #2980b9; }
+
+    button.xlsx {
+      padding: 9px 20px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button.xlsx:hover { background: #1e8449; }
+
+    /* Import button styled like a button but wraps a file input */
+    .import-btn {
+      position: relative;
+      padding: 9px 20px;
+      background: #8e44ad;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .import-btn:hover { background: #7d3c98; }
+    .import-btn input[type="file"] {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      font-size: 0;
+    }
+
+    .import-info {
+      font-size: 12px;
+      color: #888;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: #f8f0ff;
+      border-left: 3px solid #8e44ad;
+      border-radius: 4px;
+    }
+    .import-info b { color: #8e44ad; }
+
+    .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+    .stat {
+      background: white;
+      border-radius: 8px;
+      padding: 14px 18px;
+      text-align: center;
+      flex: 1;
+      min-width: 90px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .stat .num { font-size: 26px; font-weight: bold; }
+    .stat .lbl { font-size: 12px; color: #888; margin-top: 2px; }
+    .stat.blue   .num { color: #3498db; }
+    .stat.orange .num { color: #e67e22; }
+    .stat.green  .num { color: #27ae60; }
+    .stat.red    .num { color: #e74c3c; }
+
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #2c3e50; color: white; padding: 11px 12px; text-align: left; font-size: 13px; }
+    td { padding: 9px 12px; font-size: 13px; border-bottom: 1px solid #eee; vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #f8f9fa; }
+
+    .st-select {
+      padding: 4px 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .st-select:focus { outline: none; }
+    .st-sent      { background: #fef9e7; color: #d68910; border-color: #d68910; }
+    .st-interview { background: #d5f5e3; color: #1e8449; border-color: #27ae60; }
+    .st-rejected  { background: #fadbd8; color: #c0392b; border-color: #e74c3c; }
+
+    button.del {
+      background: none;
+      color: #e74c3c;
+      border: 1px solid #e74c3c;
+      padding: 3px 9px;
+      font-size: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button.del:hover { background: #e74c3c; color: white; }
+    .empty { text-align: center; padding: 30px; color: #aaa; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<h1>📋 Application-Tracker</h1>
+
+<!-- Add Form -->
+<div class="box">
+  <h2>Add New Application</h2>
+  <div class="row">
+    <input type="text" id="Company" placeholder="Company Name *">
+    <input type="text" id="City"    placeholder="City *">
+  </div>
+  <div class="row">
+    <select id="Position">
+      <option>Anwendungsentwicklung</option>
+      <option>Systemintegration</option>
+    </select>
+    <div class="auto-status">Status: Sent (automatic)</div>
+    <input type="date" id="dt">
+  </div>
+  <div class="btn-row">
+    <button class="add"  onclick="AddF()">+ Add</button>
+    <button class="xlsx" onclick="exportXLSX()">⬇ Export Excel</button>
+    <label class="import-btn">
+      📂 Import Excel
+      <input type="file" accept=".xls,.xlsx,.csv" onchange="importFile(this)">
+    </label>
+  </div>
+  <div class="import-info">
+    <b>Import format:</b> Excel or CSV file must have columns in this order:
+    <b>Company · City · Position · Status · Date</b>
+    (first row = header, will be skipped automatically)
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat blue">   <div class="num" id="n-total">0</div><div class="lbl">Total Sent</div></div>
+  <div class="stat orange"> <div class="num" id="n-sent">0</div> <div class="lbl">Waiting</div></div>
+  <div class="stat green">  <div class="num" id="n-inv">0</div>  <div class="lbl">Interview</div></div>
+  <div class="stat red">    <div class="num" id="n-rej">0</div>  <div class="lbl">Rejected</div></div>
+</div>
+
+<!-- Table -->
+<div class="box" style="padding:0; overflow:hidden">
+  <table>
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>City</th>
+        <th>Position</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="liste">
+      <tr><td colspan="6" class="empty">No applications yet.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SheetJS library — reads .xlsx and .xls files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script>
+
+  // load saved data from browser — empty array if nothing saved yet
+  var saved = localStorage.getItem('appTrackerData');
+  var Application = saved ? JSON.parse(saved) : [];
+
+  document.getElementById('dt').value = new Date().toISOString().split('T')[0];
+
+  // ── ADD ────────────────────────────────────────────────────────────────────
+  function AddF() {
+    var Company  = document.getElementById('Company').value.trim();
+    var City     = document.getElementById('City').value.trim();
+    var Position = document.getElementById('Position').value;
+    var dt       = document.getElementById('dt').value;
+
+    if (Company === '' || City === '') {
+      alert('Please enter Company and City!');
+      return;
+    }
+
+    Application.push({
+      id:       Date.now(),
+      Company:  Company,
+      City:     City,
+      Position: Position,
+      status:   'Sent',
+      dt:       dt
+    });
+
+    document.getElementById('Company').value = '';
+    document.getElementById('City').value    = '';
+
+    Update();
+  }
+
+  // ── IMPORT EXCEL / CSV ────────────────────────────────────────────────────
+  function importFile(input) {
+    var file = input.files[0];
+    if (!file) return;
+
+    var reader = new FileReader();
+
+    // CSV file — read as plain text
+    if (file.name.endsWith('.csv')) {
+      reader.onload = function(e) {
+        parseCSV(e.target.result);
+      };
+      reader.readAsText(file);
+
+    // Excel file (.xls or .xlsx) — read as binary
+    } else {
+      reader.onload = function(e) {
+        parseExcel(e.target.result);
+      };
+      reader.readAsArrayBuffer(file);
+    }
+
+    // reset input so same file can be imported again if needed
+    input.value = '';
+  }
+
+  function parseExcel(buffer) {
+    // SheetJS reads the binary data
+    var wb   = XLSX.read(buffer, { type: 'array' });
+    // take the first sheet
+    var ws   = wb.Sheets[wb.SheetNames[0]];
+    // convert to array of arrays — each row is an array of cell values
+    var rows = XLSX.utils.sheet_to_json(ws, { header: 1 });
+
+    loadRows(rows);
+  }
+
+  function parseCSV(text) {
+    var lines = text.split('\n');
+    var rows  = [];
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i].trim();
+      if (line !== '') {
+        // split by comma, remove surrounding quotes if any
+        var cells = line.split(',').map(function(c) {
+          return c.replace(/^"|"$/g, '').trim();
+        });
+        rows.push(cells);
+      }
+    }
+    loadRows(rows);
+  }
+
+  function loadRows(rows) {
+    if (rows.length < 2) {
+      alert('File is empty or has only a header row.');
+      return;
+    }
+
+    var added   = 0;
+    var skipped = 0;
+
+    // start from row index 1 to skip the header row
+    for (var i = 1; i < rows.length; i++) {
+      var row = rows[i];
+
+      // skip completely empty rows
+      if (!row || row.length === 0) continue;
+
+      var Company  = String(row[0] || '').trim();
+      var City     = String(row[1] || '').trim();
+      var Position = String(row[2] || '').trim();
+      var status   = String(row[3] || '').trim();
+      var dt       = String(row[4] || '').trim();
+
+      // skip rows where company name is missing
+      if (Company === '') {
+        skipped++;
+        continue;
+      }
+
+      // if Position is empty use default
+      if (Position === '') Position = 'Anwendungsentwicklung';
+
+      // if status is not a valid value, default to Sent
+      var validStatus = ['Sent', 'Interview', 'Rejected'];
+      var statusOk = false;
+      for (var j = 0; j < validStatus.length; j++) {
+        if (validStatus[j].toLowerCase() === status.toLowerCase()) {
+          status    = validStatus[j]; // fix casing
+          statusOk  = true;
+          break;
+        }
+      }
+      if (!statusOk) status = 'Sent';
+
+      // convert date format if needed
+      // Excel sometimes gives dates as numbers (serial date)
+      if (!isNaN(dt) && dt !== '') {
+        // Excel serial date to JS date
+        var excelDate = new Date((parseInt(dt) - 25569) * 86400 * 1000);
+        dt = excelDate.toISOString().split('T')[0];
+      } else if (dt.includes('.')) {
+        // convert DD.MM.YYYY to YYYY-MM-DD
+        var parts = dt.split('.');
+        if (parts.length === 3) {
+          dt = parts[2] + '-' + parts[1] + '-' + parts[0];
+        }
+      }
+
+      Application.push({
+        id:       Date.now() + i,  // unique id per row
+        Company:  Company,
+        City:     City,
+        Position: Position,
+        status:   status,
+        dt:       dt
+      });
+
+      added++;
+    }
+
+    Update();
+    Save();
+    alert(added + ' entries imported successfully.' + (skipped > 0 ? '\n' + skipped + ' rows skipped (no company name).' : ''));
+  }
+
+  // ── STATUS CHANGE IN TABLE ─────────────────────────────────────────────────
+  function ChangeStatus(id, newStatus) {
+    for (var i = 0; i < Application.length; i++) {
+      if (Application[i].id === id) {
+        Application[i].status = newStatus;
+        break;
+      }
+    }
+    // only update counters — do not rebuild table (would reset dropdowns)
+    UpdateCounters();
+    Save();
+  }
+
+  // ── DELETE ─────────────────────────────────────────────────────────────────
+  function Delete(id) {
+    if (confirm('Delete this entry?')) {
+      Application = Application.filter(function(b) { return b.id !== id; });
+      Update();
+      Save();
+    }
+  }
+
+  // ── REBUILD TABLE (called on Add, Delete, Import) ──────────────────────────
+  function Update() {
+    var tbody = document.getElementById('liste');
+
+    if (Application.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="6" class="empty">No applications yet.</td></tr>';
+      UpdateCounters();
+      return;
+    }
+
+    var html = '';
+    for (var i = 0; i < Application.length; i++) {
+      var b   = Application[i];
+      var d   = b.dt ? b.dt.split('-').reverse().join('.') : '-';
+      var cls = 'st-' + b.status.toLowerCase();
+
+      var opts    = '';
+      var choices = ['Sent', 'Interview', 'Rejected'];
+      for (var j = 0; j < choices.length; j++) {
+        var sel = (choices[j] === b.status) ? ' selected' : '';
+        opts += '<option' + sel + '>' + choices[j] + '</option>';
+      }
+
+      html += '<tr>';
+      html += '<td>' + b.Company + '</td>';
+      html += '<td>' + b.City + '</td>';
+      html += '<td>' + b.Position + '</td>';
+      html += '<td><select class="st-select ' + cls + '" onchange="ChangeStatus(' + b.id + ', this.value); colorSelect(this)">' + opts + '</select></td>';
+      html += '<td>' + d + '</td>';
+      html += '<td><button class="del" onclick="Delete(' + b.id + ')">X</button></td>';
+      html += '</tr>';
+    }
+
+    tbody.innerHTML = html;
+    UpdateCounters();
+  }
+
+  // ── COUNTERS ONLY ──────────────────────────────────────────────────────────
+  function UpdateCounters() {
+    var sent      = 0;
+    var interview = 0;
+    var rejected  = 0;
+
+    for (var i = 0; i < Application.length; i++) {
+      if (Application[i].status === 'Sent')      sent++;
+      if (Application[i].status === 'Interview') interview++;
+      if (Application[i].status === 'Rejected')  rejected++;
+    }
+
+    document.getElementById('n-total').textContent = Application.length;
+    document.getElementById('n-sent').textContent  = sent;
+    document.getElementById('n-inv').textContent   = interview;
+    document.getElementById('n-rej').textContent   = rejected;
+  }
+
+
+  // saves all data to browser localStorage
+  // called every time something changes
+  function Save() {
+    localStorage.setItem('appTrackerData', JSON.stringify(Application));
+  }
+
+  function colorSelect(sel) {
+    sel.className = 'st-select st-' + sel.value.toLowerCase();
+  }
+
+  // ── EXPORT EXCEL ───────────────────────────────────────────────────────────
+  function exportXLSX() {
+    if (Application.length === 0) {
+      alert('No data to export yet.');
+      return;
+    }
+
+    var rows = '';
+    rows += '<Row>';
+    rows += xmlCell('Company',  'String');
+    rows += xmlCell('City',     'String');
+    rows += xmlCell('Position', 'String');
+    rows += xmlCell('Status',   'String');
+    rows += xmlCell('Date',     'String');
+    rows += '</Row>';
+
+    for (var i = 0; i < Application.length; i++) {
+      var b = Application[i];
+      var d = b.dt ? b.dt.split('-').reverse().join('.') : '';
+      rows += '<Row>';
+      rows += xmlCell(b.Company,  'String');
+      rows += xmlCell(b.City,     'String');
+      rows += xmlCell(b.Position, 'String');
+      rows += xmlCell(b.status,   'String');
+      rows += xmlCell(d,          'String');
+      rows += '</Row>';
+    }
+
+    var xml = '<?xml version="1.0"?>'
+      + '<?mso-application progid="Excel.Sheet"?>'
+      + '<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"'
+      + ' xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">'
+      + '<Worksheet ss:Name="Applications">'
+      + '<Table>' + rows + '</Table>'
+      + '</Worksheet>'
+      + '</Workbook>';
+
+    var blob = new Blob([xml], { type: 'application/vnd.ms-excel' });
+    var url  = URL.createObjectURL(blob);
+    var link = document.createElement('a');
+    link.href     = url;
+    link.download = 'applications.xls';
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
+  // run on page load — shows saved data immediately
+  Update();
+
+  function xmlCell(value, type) {
+    var safe = String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+    return '<Cell><Data ss:Type="' + type + '">' + safe + '</Data></Cell>';
+  }
+
+</script>
+</body>
+</html>
